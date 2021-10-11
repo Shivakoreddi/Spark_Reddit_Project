@@ -19,6 +19,9 @@ Below is our load process flow from S3 to Spark warehouse direcotry
 ![image](https://user-images.githubusercontent.com/42261408/136721483-bfe222a5-567f-4abd-851e-3db51cd3d132.png)
 
 
+And below is our Warehouse Schema Design:
+
+![image](https://user-images.githubusercontent.com/42261408/136721589-80c506b9-a769-4321-9918-039824cbc7e5.png)
 
 
 
