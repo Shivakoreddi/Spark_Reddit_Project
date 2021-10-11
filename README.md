@@ -16,7 +16,8 @@ Below is our system design flow:
 
 Below is our load process flow from S3 to Spark warehouse direcotry
 
-![image](https://user-images.githubusercontent.com/42261408/136721405-f8956589-2bd0-44e9-b21f-67eb9e6e4070.png)
+![image](https://user-images.githubusercontent.com/42261408/136721483-bfe222a5-567f-4abd-851e-3db51cd3d132.png)
+
 
 
 
