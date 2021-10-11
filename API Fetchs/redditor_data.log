@@ -1,0 +1,12 @@
+06/10/2021 19:05:57 - app - INFO - Starting Application
+06/10/2021 19:05:57 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): www.reddit.com:443
+06/10/2021 19:05:58 - urllib3.connectionpool - DEBUG - https://www.reddit.com:443 "POST /api/v1/access_token HTTP/1.1" 200 121
+06/10/2021 19:05:58 - app - INFO - start popular redditors data fetch!
+06/10/2021 19:05:58 - app - INFO - start popular redditors data fetch!
+06/10/2021 19:05:58 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): oauth.reddit.com:443
+06/10/2021 19:05:59 - urllib3.connectionpool - DEBUG - https://oauth.reddit.com:443 "GET /users/popular HTTP/1.1" 200 7263
+06/10/2021 19:05:59 - root - INFO - hot redditors data fetch completed!
+06/10/2021 19:05:59 - app - INFO - start new redditors data fetch!
+06/10/2021 19:05:59 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): oauth.reddit.com:443
+06/10/2021 19:06:00 - urllib3.connectionpool - DEBUG - https://oauth.reddit.com:443 "GET /users/new HTTP/1.1" 200 2872
+06/10/2021 19:06:00 - root - INFO - new redditors data fetch completed!

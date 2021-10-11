@@ -9,7 +9,19 @@ from srp_decorators import request_execute
 def comments(res):
     df = pd.DataFrame()
     for post in res.json()['data']['children']:
-        df = df.append({'data':post['data']},ignore_index=True)
+        df = df.append({
+            'author': post['data']['author'],
+            'author_flair_text': post['data']['author_flair_text'],
+            'post_text': 'null',
+            'likes': post['data']['likes'],
+            'subreddit_id': post['data']['subreddit_id'],
+            'created_utc': post['data']['created_utc'],
+            'score': post['data']['score'],
+            'post_url': post['data']['link_url'],
+            'subreddit': post['data']['subreddit'],
+            'parent_id': post['data']['parent_id']
+
+        }, ignore_index=True)
     return df
 
 
@@ -26,7 +38,7 @@ def main():
     params = {'limit': 100}
     log.info("start comments data fetch!")
 
-    # hot redditors
+    # hot redditorsvi
     com_df = comments(request_execute(url1, headers))
     if com_df is None:
         logging.error("failed to fetch comments data")

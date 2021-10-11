@@ -9,14 +9,40 @@ from srp_decorators import request_execute
 def hot_subreddits(res):
     df = pd.DataFrame()
     for post in res.json()['data']['children']:
-        df = df.append({'data':post['data']},ignore_index=True)
+        df = df.append({
+            'subreddit_name': post['data']['display_name'],
+            'description': post['data']['description'],
+            'subscribers': post['data']['subscribers'],
+            'name': post['data']['name'],
+            'id': post['data']['id'],
+            'created_utc': post['data']['created_utc'],
+            'user_is_subscriber': post['data']['user_is_subscriber'],
+            'user_is_contributor': post['data']['user_is_contributor'],
+            'user_is_moderator': post['data']['user_is_moderator'],
+            'subreddit_type': post['data']['subreddit_type'],
+            'title': post['data']['title'],
+            'url': post['data']['url']
+        }, ignore_index=True)
 
     return df
 
 def new_subreddits(res):
     df = pd.DataFrame()
     for post in res.json()['data']['children']:
-        df = df.append({'data':post['data']},ignore_index=True)
+        df = df.append({
+            'subreddit_name': post['data']['display_name'],
+            'description': post['data']['description'],
+            'subscribers': post['data']['subscribers'],
+            'name': post['data']['name'],
+            'id': post['data']['id'],
+            'created_utc': post['data']['created_utc'],
+            'user_is_subscriber': post['data']['user_is_subscriber'],
+            'user_is_contributor': post['data']['user_is_contributor'],
+            'user_is_moderator': post['data']['user_is_moderator'],
+            'subreddit_type': post['data']['subreddit_type'],
+            'title': post['data']['title'],
+            'url': post['data']['url']
+        }, ignore_index=True)
     return df
 
 

@@ -9,13 +9,39 @@ from srp_decorators import request_execute
 def hot_redditor(res):
     df = pd.DataFrame()
     for post in res.json()['data']['children']:
-        df = df.append({'data':post['data']},ignore_index=True)
+        df = df.append({
+            'user_name': post['data']['display_name'],
+            'profile_img': post['data']['icon_img'],
+            'subscribers': post['data']['subscribers'],
+            'name': post['data']['name'],
+            'id': post['data']['id'],
+            'created_utc': post['data']['created_utc'],
+            'user_is_subscriber': post['data']['user_is_subscriber'],
+            'user_is_contributor': post['data']['user_is_contributor'],
+            'user_is_moderator': post['data']['user_is_moderator'],
+            'subreddit_type': post['data']['subreddit_type'],
+            'over18': post['data']['over18'],
+            'url': post['data']['url']
+        }, ignore_index=True)
     return df
 
 def new_redditor(res):
     df = pd.DataFrame()
     for post in res.json()['data']['children']:
-        df = df.append({'data':post['data']},ignore_index=True)
+        df = df.append({
+            'user_name': post['data']['display_name'],
+            'profile_img': post['data']['icon_img'],
+            'subscribers': post['data']['subscribers'],
+            'name': post['data']['name'],
+            'id': post['data']['id'],
+            'created_utc': post['data']['created_utc'],
+            'user_is_subscriber': post['data']['user_is_subscriber'],
+            'user_is_contributor': post['data']['user_is_contributor'],
+            'user_is_moderator': post['data']['user_is_moderator'],
+            'subreddit_type': post['data']['subreddit_type'],
+            'over18': post['data']['over18'],
+            'url': post['data']['url']
+        }, ignore_index=True)
     return df
 
 

@@ -9,14 +9,38 @@ from srp_decorators import request_execute
 def hot_submission(res):
     df = pd.DataFrame()
     for post in res.json()['data']['children']:
-        df = df.append({'data':post['data']},ignore_index=True)
+        df = df.append({
+            'author': post['data']['author'],
+            'author_flair_text': post['data']['author_flair_text'],
+            'post_text': post['data']['title'],
+            'likes': post['data']['likes'],
+            'subreddit_id': post['data']['subreddit_id'],
+            'created_utc': post['data']['created_utc'],
+            'score': post['data']['score'],
+            'post_url': post['data']['url'],
+            'subreddit': post['data']['subreddit'],
+            'parent_id': 'n/a_submissions'
+
+        }, ignore_index=True)
 
     return df
 
 def new_submission(res):
     df = pd.DataFrame()
     for post in res.json()['data']['children']:
-        df = df.append({'data':post['data']},ignore_index=True)
+        df = df.append({
+            'author': post['data']['author'],
+            'author_flair_text': post['data']['author_flair_text'],
+            'post_text': post['data']['title'],
+            'likes': post['data']['likes'],
+            'subreddit_id': post['data']['subreddit_id'],
+            'created_utc': post['data']['created_utc'],
+            'score': post['data']['score'],
+            'post_url': post['data']['url'],
+            'subreddit': post['data']['subreddit'],
+            'parent_id': 'n/a_submissions'
+
+        }, ignore_index=True)
     return df
 
 

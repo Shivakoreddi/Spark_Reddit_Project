@@ -12,7 +12,7 @@ def hotredditor(res2):
         df = df.append({
                 'user_name':post['data']['display_name'],
                 'profile_img':post['data']['icon_img'],
-                'own_subscribers':post['data']['subscribers'],
+                'subscribers':post['data']['subscribers'],
                 'name':post['data']['name'],
                 'id':post['data']['id'],
                 'created_utc':post['data']['created_utc'],
