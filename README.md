@@ -4,7 +4,7 @@ In this project, I have designed dwh model on reddit datase, this may not be a c
 I have research reddit application and its business flow, and identified few end points to develop my project.
 Our main goal is to fetch data from reddit application through public API gateway with end points given in document references provided on reddit api, to datawarehouse model setup on spark warehouse. I have accomplished this complete task with multiple stages involved. 
 1. Data Collection  from Reddit API
-2. Persists the source files we call them daily increment files o S# buckets; partitioned based on file category
+2. Persists the source files we call them daily increment files o S3 buckets; partitioned based on file category
 3. Run delta jobs from S3 to Spark warehouse using Pyspark running on multi node cluster
 
 
