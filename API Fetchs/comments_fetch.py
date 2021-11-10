@@ -36,7 +36,7 @@ def main():
     url1 = access.comments_url
     df1 = pd.DataFrame()
     params = {'limit': 100}
-    log.info("start comments data fetch!")
+    log.info("start comments data fetching!")
 
     # hot redditorsvi
     com_df = comments(request_execute(url1, headers))
